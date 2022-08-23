@@ -39,3 +39,9 @@ export const insertTask = async (newTask:Task) =>
   db()
     .table('tasks') 
     .insert({...newTask})
+
+export const getById = async (id:number) => 
+    db()
+      .table('tasks') 
+      .where({id: id})
+      .first()

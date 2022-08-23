@@ -39,3 +39,10 @@ curl --location --request DELETE 'localhost:3000/tasks/3' \
 ' In case to try to update other user's task it will not update as the update requires to match userId and taskId
 
 
+## Tests
+1. npm run test
+' The tests require the seed data as no stubbing were used in order to test end to end.
+
+## Docker
+1. docker build . -t everyio 
+2. docker run --name everyio -p 3000:3000 -d everyio:latest
